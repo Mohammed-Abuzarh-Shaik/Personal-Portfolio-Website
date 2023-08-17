@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abbu's portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f81f602dac.js" crossorigin="anonymous"></script>
+</head>
+<body onload="initClock()">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img width='250px' src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                
+                    <li><a href="#about">About</a></li>
+                    
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    
+                    <li><a href="#contact">Contact</a></li>
+
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            
+            <div class="header-text">
+                <h1>MOHAMMED <br> ABUZARH SHAIK,</h1>
+                <p>AI | ML  Student</p>
+                <h6>Srinivasa Ramanujan Institute Of Technology.</h6>
+            </div><br><br><br>
+            <div class="datetime">
+                <div class="date">
+                    <span id = "dayname">Day</span>,
+                    <span id="month">Month</span>,
+                    <span id="daynum">00</span>,
+                    <span id="year">Year</span>
+                </div>
+                <div class="time">
+                    <span id="hour">00</span>:
+                    <span id="minutes">00</span>:
+                    <span id="seconds">00</span>
+                    <span id="period">AM</span>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <!--- ---------------about------------ -->
+    <div id="about">
+        <div class="container">
+            <h1 class="sub-title">About Me</h1><br>
+            <p><h2>I'M Mohammed Abuzarh Shaik.</h2> (you can call me ' Abbu ') <br> <br>
+               <b> Rising senior of Artificial Intelligence & Machine Learning Department at Srinivasa Ramanujan Institute Of Technology - Ananthapuramu. <br>
+                 I am excited to begin my career in the route of Artificial Intelligence and I look forward in putting my education and aquired skills to use , <br>
+                   and I enjoy getting to create and work on projects as I can gain more knowledge and strengthen my skills.</b></p><br>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+                <p class="tab-links" onclick="opentab('Internships')">Internships </p>
+            </div><br>
+            <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                    <li><span>HTML/CSS/JS</span> <br>Web Devolopement</li>
+                    <li><span>Python/java </span><br>Basic Programming</li>
+                    <li><span>Database Management Systems </span><br> Basic sql programming</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+                <ul>
+                    <li><span>2020-2024</span> <br>Computer Science and Engineering(AI&ML) <br> - Srinivasa Ramanujan Institute Of Technology - Ananthapuramu </li>
+                    <li><span>2018-2020 </span><br>Intermedeate(12th board) - Narayana Junior College - Ananthapuramu</li>
+                    <li><span>2018 </span><br> SSC - Prasad Talent School - Ananthapuramu</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Internships">
+                <ul>
+                    <li><span>Cyber Security</span> <br>From AICTE-Eduskills</li>
+                    <li><span>Salesforce Devoloper </span><br>From Salesforce Trailhead</li>
+                    <li><span>Process Mining Virtual Internship</span><br>From AICTE-Eduskills</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <!-- -------------------Certificates---------------- --> 
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Certificates</h1>
+            <div class="certificate-list">
+                <div class="work">
+                    <img src="images/c1.jpg" >
+                    <div class="layer">
+                        <h2>Cyber Security - Internship</h2>
+                        <p>This is a certificate for completion of cyber security internship through the Eduskills -AICTE.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/c2.jpg" >
+                    <div class="layer">
+                        <h2>Salesforce Devoloper - Internship</h2>
+                        <p>This is a certificate for completion of Salesforce Devoloper Virtual internship through the Salesforce Trailhead.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/c3.jpg" >
+                    <div class="layer">
+                        <h2>Process Mining Virtual - Internship</h2>
+                        <p>This is a certificate for completion of Process Mining Virtual internship through the Eduskills -AICTE.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a  href="resume.pdf" target="_blank"  class="btn"> <b> View Resume </b> <i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+    </div>
+    <!--------------------------- contact------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <h1 class="sub-title">Contact Me</h1>
+                <div class="contact-left">
+                    <form name="submit-to-google-sheet" >
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="message"  rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2"><b> Submit</b></button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+                <div class="contact-right">
+                    <p><i class="fa-solid fa-square-envelope"></i> mohammedabuzarhshaik@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i> 7893486983</p> <br><br>
+       <div class="wrapper">
+         <div class="button">
+            <div class="icon">
+              <a  target="_blank" href="https://www.facebook.com/profile.php?id=100053540918906&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <span>Facebook</span>
+         </div>
+         <div class="button">
+            <div class="icon">
+                <a target="_blank" href="https://twitter.com/Abbushaik_?t=C_EelNwRvndfBKHSsXKcSA&s=09"> <i class="fab fa-twitter"></i></a>
+            </div>
+            <span>Twitter</span>
+         </div>
+         <div class="button">
+            <div class="icon">
+                <a target="_blank" href="https://instagram.com/abbu_s.h.a.i.k?igshid=YzgyMTM2MGM="> <i class="fab fa-instagram"></i></a>
+            </div>
+            <span>Instagram</span>
+         </div>
+        <div class="button">
+            <div class="icon">
+                <a target="_blank" href="https://www.linkedin.com/in/mohammed-abuzarh-s-4728b7212"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <span>Linkedin</span>
+         </div>
+      </div>
+      <div class="copyright">
+        <p>All Rights Reserved &copy; Mohammed Abuzarh Shaik </p>
+      </div>
+   
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script type="text/javascript">
+        function updateClock(){
+          var now = new Date();
+          var dname = now.getDay(),
+              mo = now.getMonth(),
+              dnum = now.getDate(),
+              yr = now.getFullYear(),
+              hou = now.getHours(),
+              min = now.getMinutes(),
+              sec = now.getSeconds(),
+              pe = "AM";
+    
+              if(hou >= 12){
+                pe = "PM";
+              }
+              if(hou == 0){
+                hou = 12;
+              }
+              if(hou > 12){
+                hou = hou - 12;
+              }
+    
+              Number.prototype.pad = function(digits){
+                for(var n = this.toString(); n.length < digits; n = 0 + n);
+                return n;
+              }
+    
+              var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+              var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+              var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+              var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+              for(var i = 0; i < ids.length; i++)
+              document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+        }
+    
+        function initClock(){
+          updateClock();
+          window.setInterval("updateClock()", 1);
+        }
+        </script>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxAYyhlS1XqlHY20GH1m6bd1W3SEoCd10m-PyfXnTWv4mRJhLY8gddv5Qs-YoPt1Q1v5Q/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = " Message sent successfully..!"
+                    setTimeout(function(){
+                        msg.innerHTML=""
+                    },3000)
+                    form.reset
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+</body>
+</html>
